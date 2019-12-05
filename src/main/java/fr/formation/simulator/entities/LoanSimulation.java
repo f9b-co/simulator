@@ -16,7 +16,7 @@ public class LoanSimulation {
     @Column(length = 32, nullable = false)
     private String loanType;
     @Column(nullable = false)
-    private LocalDate startSate;
+    private LocalDate startDate;
     @Column(precision = 2, nullable = false)
     private BigInteger duration;
     @Column(nullable = false, scale = 2)
@@ -48,12 +48,12 @@ public class LoanSimulation {
         this.loanType = loanType;
     }
 
-    public LocalDate getStartSate() {
-        return startSate;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    public void setStartSate(LocalDate startSate) {
-        this.startSate = startSate;
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
     }
 
     public BigInteger getDuration() {

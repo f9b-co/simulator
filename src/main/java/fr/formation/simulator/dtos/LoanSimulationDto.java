@@ -1,14 +1,9 @@
 package fr.formation.simulator.dtos;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDate;
-
 
 public class LoanSimulationDto {
     @NotNull
@@ -18,7 +13,7 @@ public class LoanSimulationDto {
     private String loanType;
     @NotNull
     @FutureOrPresent
-    private LocalDate startSate;
+    private LocalDate startDate;
     @NotNull
     @Positive
     private BigInteger duration;
@@ -32,7 +27,6 @@ public class LoanSimulationDto {
     public LoanSimulationDto() {
         //
     }
-
 
     public BigDecimal getAmount() {
         return amount;
@@ -50,12 +44,12 @@ public class LoanSimulationDto {
         this.loanType = loanType;
     }
 
-    public LocalDate getStartSate() {
-        return startSate;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    public void setStartSate(LocalDate startSate) {
-        this.startSate = startSate;
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
     }
 
     public BigInteger getDuration() {
